@@ -1,0 +1,12 @@
+.window
+  %h1 Save
+  #body
+    %form{:action=>"/save",:method=>"get",id:"formAdd"}
+      %label Name:
+      %input{ :type=>"text",:id=>"name",:name=>"name"}
+      %br
+      %label race:
+      %input{:type=>"text", :id=>"race", :name=>"race"}
+      %br
+      %input{:type=>"button",:id=>"btSaveDog",:value=>"Add"}
+

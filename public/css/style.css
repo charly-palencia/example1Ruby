@@ -1,0 +1,29 @@
+body {
+  font-family:"Lucida Grande","Arial Unicode MS", sans-serif;
+}
+.window {
+  position:relative;
+  height: 324px;
+  width: 403px;
+  border: solid 2px #7DBFFF;
+ }
+
+.window h1{
+  color:white;
+  position:relative;
+  top:0px;
+  border 0px;
+  padding:opx;
+  margin:0px;
+  background: #7DBFFF;
+  height: 24px;
+  width: 400px;
+  font-size: 16px;
+  padding-left: 3px;
+}
+
+.window #body {
+  position:relative;
+  width: 400px;
+  height:294px;
+}
