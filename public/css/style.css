@@ -1,13 +1,29 @@
 body {
   font-family:"Lucida Grande","Arial Unicode MS", sans-serif;
 }
+label {
+  width: 60px;
+  display: block;
+  float: left;
+}
+
+#panel{
+  position:absolute;
+  top: 0px;
+  left:40%;
+}
 .window {
+  top: 20px;
+  float:left;
   position:relative;
   height: 324px;
   width: 403px;
   border: solid 2px #7DBFFF;
  }
-
+ .window input[type="text"]{
+   margin-top:5px;
+   width:300px;
+}
 .window h1{
   color:white;
   position:relative;
@@ -22,8 +38,15 @@ body {
   padding-left: 3px;
 }
 
+.window h1 #close{
+  float:right;
+  right:5px;
+}
+
 .window #body {
-  position:relative;
+  margin-left:5px;
+  margin-top: 
+  position: relative;
   width: 400px;
-  height:294px;
+  height: 294px;
 }

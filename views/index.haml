@@ -1,12 +1,25 @@
+#panel
+  %a{:id=>"listWin"} List Window
 .window
-  %h1 Save
+  %h1
+    #Save
+    #close close
   #body
     %form{:action=>"/save",:method=>"get",id:"formAdd"}
-      %label Name:
+      %label{:for=>"name"} Name:
       %input{ :type=>"text",:id=>"name",:name=>"name"}
       %br
-      %label race:
+      %label{:for=>"race"} Race:
       %input{:type=>"text", :id=>"race", :name=>"race"}
       %br
+      %label{:for=>"birth"} Birth:
+      %input{:type=>"text",:id=>"birth",:name=>"birth"}
+      %br
+      %label{:for=>"large"} Large:
+      %input{:type=>"text",:id=>"large",:name=>"large"}
+      %br
+      %label{:for=>"weight"} Weight:
+      %input{:type=>"text",:id=>"weight",:name=>"weight"}
       %input{:type=>"button",:id=>"btSaveDog",:value=>"Add"}
+      
 

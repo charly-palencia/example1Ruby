@@ -1,5 +1,5 @@
 class Mammal 
-attr_accessor :name,:birth,:large,:weight
-def initialize 
-end
+attr_accessor :birth,:large,:weight
+
+
 end

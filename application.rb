@@ -3,15 +3,23 @@ require 'sinatra'
 require 'haml'
 require 'active_support'
 require 'json'
+
 #local directory
 Dir['./models/*.rb'].each {|model| require model}
 Dir['./controllers/*.rb'].each {|controller| require controller}
+
+#configurations
 enable :sessions
+
+#mime type supports on this app
 mime_type :json, "application/json"
 
 get '/dog' do
-  if defined? session[:controllerDog]
-    session[:controllerDog]=DogController.new
+  if defined? session[:controllerDog].list
+    session[:controllerDog].list
+  else
+
+    session[:controllerDog]=DogsController.new
   end
   haml :index, :format => :html5
 end
@@ -20,15 +28,14 @@ get '/' do
   haml :index, :format => :html5
 end
 
-get '/dog/save' do 
+get '/dog/save' do
   name = params[:name]
   race = params[:race]
   weight = params[:weight]
-  large = params[:large] 
+  large = params[:large]
   birth = params[:birth]
   dogTemp = Dog.new(name,race,weight,birth,large)
   session[:controllerDog].add(dogTemp)
-  session[:controllerDog].list
   haml :index, :format => :html5
 end
 
@@ -47,8 +54,3 @@ end
 after do
   puts response.status
 end
-
-
-
-
-

@@ -1,6 +1,20 @@
-.window
-  %h1 List
+.window{:id=>"winList"}
+  %h1 
+    #List
+    #close close
   #body
-    -@list.each do |dog| 
-      #{dog.name}
+    %table
+      %tr
+        %th Name
+        %th Race
+        %th Birth
+        %th Large
+        %th weight
+        -@list.each do |dog|
+          %tr
+            %td #{dog.name}
+            %td #{dog.race}
+            %td #{dog.birth}
+            %td #{dog.large}
+            %td #{dog.weight}
  
